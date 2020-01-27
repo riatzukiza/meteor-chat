@@ -1,7 +1,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Welcome to Live Chat with Meteor!</title>
+  <title>Welcome to </title>
 </head>
 <body>
   
@@ -18,7 +18,7 @@
   <div class="messages-box">
     <div class="messages-scroll">
       <div class="header">
-        <h1>Welcome to Meteor Live Chat!</h1>
+        <h1>Welcome to {{roomName}}</h1>
         <div>See this project on <a href="https://github.com/Pitchlyapp/meteor-live-chat">GitHub</a></div>
       </div>
       <div class="messages">
@@ -36,6 +36,10 @@
   </div>
   
   <div class="new-message-container">
+    <span>
+      
+      You are in {{roomName}}
+    </span>
     <form>
       <input type="text" class="message-input" placeholder="Type your message here..."><button type="submit">Send</button>
     </form>
