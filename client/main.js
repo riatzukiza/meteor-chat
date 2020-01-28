@@ -17,7 +17,9 @@ let body;
 
 Template.body.onCreated(function bodyOnCreated() {
     body = this;
-    body.roomName = new ReactiveVar(Cookie.get("room"));
+    const roomName = Cookie.get("room") || "Main Room";
+    Cookie.set("room",roomName);
+    body.roomName = new ReactiveVar(roomName);
 
 });
 
@@ -55,6 +57,9 @@ Template.body.onRendered(function bodyOnRendered() {
 });
 
 Template.body.helpers({
+    roomName() {
+        return Cookie.get("room");
+    },
 
     messages() {
 
